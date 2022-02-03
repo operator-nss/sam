@@ -14,3 +14,34 @@
 		display: block;
 	}
 }
+
+
+._icon-arrow:before {
+   content: "\e900";
+   color: #fff;
+ }
+ ._icon-cart:before {
+   content: "\e901";
+ }
+ ._icon-facebook:before {
+   content: "\e902";
+   color: #fff;
+ }
+ ._icon-favorite:before {
+   content: "\e903";
+ }
+ ._icon-insta:before {
+   content: "\e904";
+   color: #fff;
+ }
+ ._icon-mouse:before {
+   content: "\e905";
+   color: #fff;
+ }
+ ._icon-twitter:before {
+   content: "\e906";
+   color: #fff;
+ }
+ ._icon-user:before {
+   content: "\e907";
+ }

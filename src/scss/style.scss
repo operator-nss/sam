@@ -134,11 +134,66 @@ body {
 // Подключение стилей отдельных страниц
 @import "index";
 
-
 .page {
-
    // .page__mainslider
 
    &__mainslider {
+   }
+
+   // .page__products
+
+   &__products {
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__best-sale
+
+   &__best-sale {
+      background: url("@img/best-sale/best.png") 0 0 repeat;
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__new
+
+   &__new {
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__sentence
+
+   &__sentence {
+   }
+
+   // .page__reccomends
+
+   &__reccomends {
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__disconts
+
+   &__disconts {
+      background: url("@img/best-sale/best.png") 0 0 repeat;
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__think
+
+   &__think {
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
+   }
+
+   // .page__reason
+
+   &__reason {
+      background: url("@img/best-sale/best.png") 0 0 repeat;
+      @include adaptiveValue("padding-top", 80, 39);
+      @include adaptiveValue("padding-bottom", 80, 39);
    }
 }

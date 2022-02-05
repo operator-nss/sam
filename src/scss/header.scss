@@ -10,9 +10,9 @@
       right: 0;
       z-index: 50;
       background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-      top: 25px;
-      width: 50px;
-      height: 36px;
+      top: rem(25);
+      width: rem(50);
+      height: rem(36);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,6 +26,10 @@
       }
       &._background {
          background: transparent;
+      }
+      ._header-scroll & {
+         top: rem(10);
+         right: rem(10);
       }
    }
 }
@@ -110,27 +114,36 @@
    top: 0;
    left: 0;
    width: 100%;
-   z-index: 2;
-   // background-color: transparent;
-   &._scroll {
+   z-index: 10;
+
+   &._header-scroll {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       position: fixed;
-      top: 0;
+      top: -150%;
       left: 0;
       width: 100%;
       z-index: 50;
-      background-color: #fff;
+      background: url("@img/noise.png") 0 0 repeat, linear-gradient(285.45deg, #0b3f37 38.27%, #cb8d62 141.81%);
+   }
+
+   &._header-show {
+      transition: all 0.3s ease 0s;
+
+      top: 0;
    }
 
    // .header__container
 
    &__container {
       display: flex;
-      min-height: 122px;
+      min-height: rem(122);
       align-items: center;
       position: relative;
       @media (max-width: $mobile) {
-         min-height: 70px;
+         min-height: rem(70);
+      }
+      ._header-scroll & {
+         min-height: rem(60);
       }
    }
 
@@ -156,17 +169,20 @@
       }
       @media (max-width: $mobile) {
          padding: rem(30) rem(15) rem(10);
-         width: 116px;
+         width: rem(116);
       }
       img {
          width: 100%;
          height: 100%;
       }
       @media (any-hover: hover) {
-        &:hover {
-         -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-         animation: heartbeat 1.5s ease-in-out infinite both;
-       }
+         &:hover {
+            -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+            animation: heartbeat 1.5s ease-in-out infinite both;
+         }
+      }
+      ._header-scroll & {
+         padding: rem(0) rem(20) rem(0) rem(0);
       }
    }
 
@@ -181,25 +197,25 @@
       display: flex;
       position: absolute;
       top: 0;
-      right: 15px;
+      right: rem(15);
       z-index: 2;
       @media (max-width: $mobile) {
          right: 74px;
       }
+
    }
 
    // .header__link
 
    &__link {
-      height: 36px;
+      height: rem(36);
       display: flex;
       justify-content: center;
       align-items: end;
       background-color: #fff;
       @include adaptiveValue("width", 50, 36);
-      height: 60px;
+      height: rem(60);
       transition: all 0.3s ease 0s;
-
       @include adaptiveValue("height", 83, 60);
       &:not(:last-child) {
          @include adaptiveValue("margin-right", 20, 14);
@@ -209,8 +225,10 @@
          font-size: rem(26);
          transition: all 0.3s ease 0s;
          color: #0b3f37;
-
          @include adaptiveValue("font-size", 32, 20);
+      }
+      ._header-scroll & {
+         height: rem(40);
       }
       @media (any-hover: hover) {
          &:hover {
@@ -264,7 +282,7 @@
 
    &__item {
       margin: rem(5) rem(25);
-      width: 85px;
+      width: rem(85);
       @media (max-width: $mobile) {
          width: auto;
          margin: rem(20) rem(0);
@@ -295,7 +313,7 @@
       }
       @media (max-width: $mobile) {
          font-weight: 500;
-         font-size: 30px;
+         font-size: rem(30);
          line-height: 210.9%;
          color: #ffffff;
       }
@@ -329,7 +347,8 @@
          transition: all 0.3s ease 0s;
          opacity: 1;
          padding: rem(150) rem(20) rem(30) rem(20);
-         z-index: 4;
+         @include adaptiveValue("padding-top", 150, 50);
+         z-index: 50;
          display: flex;
          flex-direction: column;
          background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);

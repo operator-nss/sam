@@ -39,7 +39,7 @@ function initSliders() {
          observer: true,
          observeParents: true,
          slidesPerView: 1,
-         spaceBetween: 100,
+         spaceBetween: 110,
          // autoHeight: true,
          speed: 800,
          mousewheel: {

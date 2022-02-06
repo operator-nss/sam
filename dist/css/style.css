@@ -1779,24 +1779,24 @@ h6 {
   }
 }
 @media (min-width: 120em) {
-  .apparat-item-slide-mainslider img {
+  .apparat-item-slide-mainslider + img {
     height: 43.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 120em) {
   @supports (height: clamp( 23.25rem , 19.15rem  +  20.5vw , 43.75rem )) {
-    .apparat-item-slide-mainslider img {
+    .apparat-item-slide-mainslider + img {
       height: clamp( 23.25rem , 19.15rem  +  20.5vw , 43.75rem );
     }
   }
   @supports not (height: clamp( 23.25rem , 19.15rem  +  20.5vw , 43.75rem )) {
-    .apparat-item-slide-mainslider img {
+    .apparat-item-slide-mainslider + img {
       height: calc(23.25rem + 20.5 * (100vw - 20rem) / 100);
     }
   }
 }
 @media (max-width: 20em) {
-  .apparat-item-slide-mainslider img {
+  .apparat-item-slide-mainslider + img {
     height: 23.25rem;
   }
 }

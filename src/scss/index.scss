@@ -265,9 +265,10 @@
    left: 8%;
    z-index: 2;
    transition: bottom 0.3s ease 0s;
-   img {
+   + img {
       @include adaptiveValue("height", 700, 372, 1920, 320);
    }
+
    @media (min-width: $tablet) {
       &::before {
          content: "";
@@ -1290,7 +1291,7 @@
       justify-content: center;
       justify-content: space-between;
    }
-
+f
    // .reason__item
 
    &__item {

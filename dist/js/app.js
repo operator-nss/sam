@@ -3651,7 +3651,7 @@
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
-                spaceBetween: 100,
+                spaceBetween: 110,
                 speed: 800,
                 mousewheel: {
                     sensitivity: 1
